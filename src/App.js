@@ -1,12 +1,17 @@
 import './App.css';
 import Header from './Header';
+import Form from './Form';
 
 const App = () => {
     return (
-        <div className="App">
+        <>
             <Header />
-            <Form />
-        </div>
+            <div>
+                <Form />
+                <Error />
+                <Loading />
+            </div>
+        </>
     );
 }
 
