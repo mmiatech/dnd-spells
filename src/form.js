@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 
-const Form = () => {
+const Form = ({submitSearch}) => {
     const [spellName, setSpellName] = useState('');
 
     const onSubmit = e => {
         e.preventDefault();
         if (!spellName || spellName === '') return;
-        console.log({spellName});
+        // console.log({spellName});
+        submitSearch(spellName);
     }
 
     return (

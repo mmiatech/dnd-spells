@@ -8,17 +8,21 @@ import Form from './Form';
 import useSpellName from './hooks/useSpellName';
 
 const App = () => {
-    const { isError, isLoading, isSpellInfo } = useSpellName();
+    const { isError, isLoading, spellInfo, submitRequest } = useSpellName();
+
+    const onSubmit = (value) => {
+        submitRequest(value);
+    }
 
     return (
         <>
             <Header />
             <div>
-                {!isLoading && <Form />}
-                {isError && <Error />}
-                {isLoading && <Loader />}
+                {!isLoading && <Form submitSearch={onSubmit}/>}
+                {/* {isError && <Error />} */}
+                {/* {isLoading && <Loader />} */}
             </div>
-            {isSpellInfo && <SpellInfo />}
+            {/* {isSpellInfo && <SpellInfo />} */}
         </>
     );
 }

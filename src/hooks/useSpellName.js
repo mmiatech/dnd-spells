@@ -4,10 +4,17 @@ const useSpellName = () => {
     // console.log('use spell name hook');
     const [isError, setError] = useState(false);
     const [isLoading, setLoading] = useState(false);
-    const [isSpellInfo, setSpellInfo] = useState(null);
+    const [spellInfo, setSpellInfo] = useState(null);
+
+    const submitRequest = (spellName) => {
+        console.log({ spellName });
+    }
 
     return {
-        isError, isLoading, isSpellInfo
+        isError
+        , isLoading
+        , spellInfo
+        , submitRequest
     }
   }
 
