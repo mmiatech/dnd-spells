@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import PropTypes from "prop-types";
 
 const Form = ({submitSearch}) => {
     const [spellName, setSpellName] = useState('');
@@ -28,6 +29,10 @@ const Form = ({submitSearch}) => {
             </button>
         </form>
     );
-  }
+};
+
+Form.PropTypes = {
+    submitSearch: PropTypes.func.isRequired
+};
 
 export default Form;
