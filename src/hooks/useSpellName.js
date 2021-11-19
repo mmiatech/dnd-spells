@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const baseUrl = 'https://www.dnd5eapi.co/api';
+const baseUrl = 'https://www.dnd5eapi.co';
 
 const useSpellName = () => {
     // console.log('use spell name hook');
@@ -10,9 +10,16 @@ const useSpellName = () => {
     const [spellInfo, setSpellInfo] = useState(null);
 
     const submitRequest = async (spellName) => {
-        // console.log({ spellName });
-        const response = await axios(`${baseUrl}/spells`, {params: {name: spellName}});
-        console.log({response});
+        spellName = spellName.replaceAll(' ', '-');
+        console.log({ spellName });
+        const { data } = await axios(`${baseUrl}/api/spells/${spellName}`);
+        console.log(data);
+        console.log(data.desc);
+
+        if (!data || data.length === 0) {
+            setError('No spell found');
+            return;
+        }
     }
 
     return {
