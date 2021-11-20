@@ -10,14 +10,19 @@ const useSpellName = () => {
     const [spellInfo, setSpellInfo] = useState(null);
 
     const submitRequest = async (spellName) => {
+        setLoading(true);
+        setError(false);
+
         spellName = spellName.replaceAll(' ', '-');
-        console.log({ spellName });
+        // console.log({ spellName });
+
         const { data } = await axios(`${baseUrl}/api/spells/${spellName}`);
         console.log(data);
         console.log(data.desc);
 
         if (!data || data.length === 0) {
             setError('No spell found');
+            setLoading(false);
             return;
         }
     }
