@@ -19,9 +19,9 @@ const useSpellName = () => {
 
         const { data } = await axios(`${baseUrl}/api/spells/${spellName}`);
         console.log(data);
-        console.log(data.desc);
         console.log(data.components);
-        console.log(data.name);
+        console.log(data.classes);
+        console.log(data.desc);
         setSpellInfo({ data });
 
         if (!data || data.length === 0) {

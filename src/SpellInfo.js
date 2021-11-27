@@ -5,23 +5,27 @@ const SpellInfo = ({spellInfo}) => {
     // console.log({spellInfo});
     // console.log(spellInfo.data);
     // console.log(spellInfo.data.name);
-    const components = spellInfo.data.components.reduce((x, component) => {
-        return `${x}, ${component}`
-    } )
+    const componentsList = spellInfo.data.components.reduce((list, c) => {
+        return `${list}, ${c}`
+    });
+
+    const classesList = spellInfo.data.classes.map(c =>
+        c.name
+    ).join(", ");
+
+    const getDescription = spellInfo.data.desc.map(x =>
+        <p>{x}</p>
+    );
 
     return (
         <div>
             <h2>{spellInfo.data.name}</h2>
             <p><strong>Casting Time: </strong>{spellInfo.data.casting_time}</p>
             <p><strong>Range: </strong>{spellInfo.data.range}</p>
-            <p><strong>Compents: </strong>
-                {components}
-            </p>
+            <p><strong>Compents: </strong>{componentsList}</p>
             <p><strong>Duration: </strong>{spellInfo.data.duration}</p>
-            <p><strong>Classes: </strong>
-                {spellInfo.data.classes[0].name}
-            </p>
-            <p>{spellInfo.data.desc[0]}</p>
+            <p><strong>Classes: </strong>{classesList}</p>
+            <p>{getDescription}</p>
         </div>
     );
 }
