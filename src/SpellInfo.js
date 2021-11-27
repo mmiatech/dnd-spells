@@ -13,7 +13,7 @@ const SpellInfo = ({spellInfo}) => {
         c.name
     ).join(", ");
 
-    const getDescription = spellInfo.data.desc.map(x =>
+    const description = spellInfo.data.desc.map(x =>
         <p>{x}</p>
     );
 
@@ -25,7 +25,7 @@ const SpellInfo = ({spellInfo}) => {
             <p><strong>Compents: </strong>{componentsList}</p>
             <p><strong>Duration: </strong>{spellInfo.data.duration}</p>
             <p><strong>Classes: </strong>{classesList}</p>
-            <p>{getDescription}</p>
+            <p>{description}</p>
         </div>
     );
 }
