@@ -14,6 +14,7 @@ const useSpellName = () => {
         setError(false);
 
         spellName = spellName.replaceAll(' ', '-');
+        spellName = spellName.replaceAll("'", '');
         // console.log({ spellName });
 
         const { data } = await axios(`${baseUrl}/api/spells/${spellName}`);
