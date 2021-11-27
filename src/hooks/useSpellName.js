@@ -17,15 +17,12 @@ const useSpellName = () => {
         spellName = spellName.replaceAll("'", '');
         // console.log({ spellName });
 
-        const { data } = await axios(`${baseUrl}/api/spells/${spellName}`);
-        console.log(data);
-        console.log(data.components);
-        console.log(data.classes);
-        console.log(data.desc);
-        setSpellInfo({ data });
-
-        if (!data || data.length === 0) {
-            setError('No spell found');
+        try {
+            const { data } = await axios(`${baseUrl}/api/spells/${spellName}`);
+            //console.log(data);
+            setSpellInfo({ data });
+        } catch (err) {
+            setError(spellName);
             setLoading(false);
             return;
         }

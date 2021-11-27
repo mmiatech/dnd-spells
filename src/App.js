@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './Header';
 import Form from './Form';
-//import Error from './Error';
+import Error from './Error';
 //import Loader from './Loader';
 import SpellInfo from './SpellInfo';
 
@@ -19,8 +19,8 @@ const App = () => {
             <Header />
             {!spellInfo && (
                 <div>
+                    {isError && <Error searchTerm={isError}/>}
                     {!isLoading && <Form submitSearch={onSubmit}/>}
-                    {/* {isError && <Error />} */}
                     {/* {isLoading && <Loader />} */}
                 </div>
             )}
