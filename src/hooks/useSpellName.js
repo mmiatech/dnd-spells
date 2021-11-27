@@ -19,6 +19,9 @@ const useSpellName = () => {
         const { data } = await axios(`${baseUrl}/api/spells/${spellName}`);
         console.log(data);
         console.log(data.desc);
+        console.log(data.components);
+        console.log(data.name);
+        setSpellInfo({ data });
 
         if (!data || data.length === 0) {
             setError('No spell found');
