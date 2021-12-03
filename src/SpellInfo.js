@@ -22,7 +22,7 @@ const SpellInfo = ({spellInfo}) => {
             <h2>{spellInfo.data.name}</h2>
             <p><strong>Casting Time: </strong>{spellInfo.data.casting_time}</p>
             <p><strong>Range: </strong>{spellInfo.data.range}</p>
-            <p><strong>Compents: </strong>{componentsList}</p>
+            <p><strong>Components: </strong>{componentsList}</p>
             <p><strong>Duration: </strong>{spellInfo.data.duration}</p>
             <p><strong>Classes: </strong>{classesList}</p>
             <p>{description}</p>
