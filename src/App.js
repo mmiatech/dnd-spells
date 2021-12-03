@@ -18,7 +18,7 @@ const App = () => {
         <>
             <Header />
             {!spellInfo && (
-                <div>
+                <div class="info-display">
                     {isError && <Error searchTerm={isError}/>}
                     {!isLoading && <Form submitSearch={onSubmit}/>}
                     {/* {isLoading && <Loader />} */}
