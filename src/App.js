@@ -2,7 +2,7 @@ import './App.css';
 import Header from './Header';
 import Form from './Form';
 import Error from './Error';
-//import Loader from './Loader';
+import Loader from './Loader';
 import SpellInfo from './SpellInfo';
 import Container from '@mui/material/Container';
 
@@ -28,7 +28,7 @@ const App = () => {
                         <div>
                             {isError && <Error searchTerm={isError}/>}
                             {!isLoading && <Form submitSearch={onSubmit}/>}
-                            {/* {isLoading && <Loader />} */}
+                            {isLoading && <Loader />}
                         </div>
                     )}
                     {spellInfo && <SpellInfo spellInfo={spellInfo} />}
