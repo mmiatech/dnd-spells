@@ -22,7 +22,7 @@ const App = () => {
                 maxWidth="md"
                 className="container"
             >
-                <Container elevation={3} className="paper">
+                <Container className="paper">
                     {!spellInfo && (
                         <div>
                             {isError && <Error searchTerm={isError}/>}
