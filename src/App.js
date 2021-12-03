@@ -21,9 +21,9 @@ const App = () => {
             <Header />
             <Container
                 maxWidth="md"
-                class="info-display-container"
+                class="container"
             >
-                <Paper elevation={3} class="info-display-inner">
+                <Paper elevation={3} class="paper">
                     {!spellInfo && (
                         <div>
                             {isError && <Error searchTerm={isError}/>}

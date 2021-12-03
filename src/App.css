@@ -1,6 +1,7 @@
 body {
   background-color: #170D1D;
   text-align: center;
+  color: #F1F6DC;
 }
 
 .App {
@@ -15,15 +16,26 @@ body {
   color: #B5BF88;
 }
 
-.info-display-container {
+.container {
   max-width: 80%;
   margin: 0 auto;
   align-content: center;
 }
 
-.info-display-inner {
+.paper {
   border-radius: 1em;
-  margin-top: 2em;
+  margin: 2em 0;
   padding: 2em;
-  background-color: #0B574E;
+  background-color: #103235;
 }
+
+.info-display {
+  text-align: left;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+
