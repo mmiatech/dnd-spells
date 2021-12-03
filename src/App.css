@@ -1,9 +1,9 @@
 body {
   background-color: #170D1D;
+  text-align: center;
 }
 
 .App {
-  text-align: center;
 }
 
 .app-header {
@@ -15,6 +15,15 @@ body {
   color: #B5BF88;
 }
 
-.info-display {
+.info-display-container {
+  max-width: 80%;
+  margin: 0 auto;
+  align-content: center;
+}
+
+.info-display-inner {
+  border-radius: 1em;
+  margin-top: 2em;
+  padding: 2em;
   background-color: #0B574E;
 }
