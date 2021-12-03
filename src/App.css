@@ -4,9 +4,6 @@ body {
   color: #F1F6DC;
 }
 
-.App {
-}
-
 .app-header {
   background-color: #3E104E;
   display: flex;
@@ -17,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: 80%;
+  max-width: 70%;
   margin: 0 auto;
   align-content: center;
 }
@@ -36,6 +33,33 @@ body {
 h2 {
   text-align: center;
   margin-top: 0;
+}
+
+input {
+  width: 80%;
+  min-width: 105px;
+  background-color: #F1F6DC;
+  border: .1em solid #170D1D;
+  border-radius: .5em;
+  padding: .2em .5em;
+  color: #103235;
+}
+
+button {
+  display: block;
+  width: 20%;
+  min-width: 80px;
+  margin: 1em auto 0 auto;
+  padding: .3em;
+  border: .1em solid #170D1D;
+  border-radius: .5em;
+  background-color: #B5BF88;
+  color: #3E104E;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #F1F6DC;
 }
 
 
