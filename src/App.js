@@ -7,7 +7,6 @@ import SpellInfo from './SpellInfo';
 import Container from '@mui/material/Container';
 
 import useSpellName from './hooks/useSpellName';
-import { Paper } from '@mui/material';
 
 const App = () => {
     const { isError, isLoading, spellInfo, submitRequest } = useSpellName();
@@ -21,9 +20,9 @@ const App = () => {
             <Header />
             <Container
                 maxWidth="md"
-                class="container"
+                className="container"
             >
-                <Paper elevation={3} class="paper">
+                <Container elevation={3} className="paper">
                     {!spellInfo && (
                         <div>
                             {isError && <Error searchTerm={isError}/>}
@@ -32,7 +31,7 @@ const App = () => {
                         </div>
                     )}
                     {spellInfo && <SpellInfo spellInfo={spellInfo} />}
-                </Paper>
+                </Container>
             </Container>
         </>
     );

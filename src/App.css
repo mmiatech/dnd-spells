@@ -11,6 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #B5BF88;
+  box-shadow: 0 .2em 2em rgba(0, 0, 0, 0.25);
 }
 
 .container {
@@ -24,6 +25,7 @@ body {
   margin: 2em 0;
   padding: 2em;
   background-color: #103235;
+  box-shadow: 0 .2em 2em rgba(0, 0, 0, 0.25);
 }
 
 .info-display {

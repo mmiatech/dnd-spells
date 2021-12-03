@@ -18,7 +18,7 @@ const SpellInfo = ({spellInfo}) => {
     );
 
     return (
-        <div class="info-display">
+        <div className="info-display">
             <h2>{spellInfo.data.name}</h2>
             <p><strong>Casting Time: </strong>{spellInfo.data.casting_time}</p>
             <p><strong>Range: </strong>{spellInfo.data.range}</p>
