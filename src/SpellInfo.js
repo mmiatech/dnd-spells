@@ -2,17 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const SpellInfo = ({spellInfo}) => {
-    // console.log({spellInfo});
-    // console.log(spellInfo.data);
-    // console.log(spellInfo.data.name);
+    // reformat component types
     const componentsList = spellInfo.data.components.reduce((list, c) => {
         return `${list}, ${c}`
     });
 
+    // reformat classes
     const classesList = spellInfo.data.classes.map(c =>
         c.name
     ).join(", ");
 
+    // reformat description
     const description = spellInfo.data.desc.map(x =>
         <p>{x}</p>
     );

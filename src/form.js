@@ -2,8 +2,10 @@ import React, {useState} from "react";
 import PropTypes from "prop-types";
 
 const Form = ({submitSearch}) => {
+    // initialize spellname
     const [spellName, setSpellName] = useState('');
 
+    // pass search term and start api call process
     const onSubmit = e => {
         e.preventDefault();
         if (!spellName || spellName === '') return;

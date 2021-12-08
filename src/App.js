@@ -9,8 +9,10 @@ import Container from '@mui/material/Container';
 import useSpellName from './hooks/useSpellName';
 
 const App = () => {
+    // pass component states and search term
     const { isError, isLoading, spellInfo, submitRequest } = useSpellName();
 
+    // pass search term
     const onSubmit = (value) => {
         submitRequest(value);
     }
