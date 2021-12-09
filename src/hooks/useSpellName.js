@@ -24,7 +24,6 @@ const useSpellName = () => {
             const {data} = await axios(`${baseUrl}/api/spells/${spellName}`);
             setSpellInfo({data});
         } catch (err) {
-            spellName = spellName.replaceAll('-', ' ');
             setError(spellName);
             setLoading(false);
             return;
